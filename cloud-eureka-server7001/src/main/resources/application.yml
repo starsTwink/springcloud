@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    hostname: localhost #eureka服务端的实例名称
+    hostname: eureka7001.com #eureka服务端的实例名称
   client:
     #false表示不向注册中心注册自己
     register-with-eureka: false
@@ -11,11 +11,11 @@ eureka:
     fetch-registry: false
     service-url:
       #集群模式指向其他eureka
-      defaultZone: http://eureka7002.com:7002/eureka/
+     # defaultZone: http://eureka7002.com:7002/eureka/
       #单机模式
-      #defaultZone: http://eureka7001.com:7001/eureka/
-  server:
-    #关闭自我保护机制，保证不可用服务被及时删除
-    enable-self-preservation: false
-    eviction-interval-timer-in-ms: 2000
+      defaultZone: http://eureka7001.com:7001/eureka/
+#  server:
+#    #关闭自我保护机制，保证不可用服务被及时删除
+#    enable-self-preservation: false
+#    eviction-interval-timer-in-ms: 2000
 
